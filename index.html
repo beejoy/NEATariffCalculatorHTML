@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nepal Eletricity Authority :: Tariff Calculator</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="/dist/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Nepal Electricity Authority</h1>
+                <h2>Tariff Calculator</h2>
+            </header>
+
+            <div class="calculator">
+                <form>
+                    <label for="currentReading">Current Reading:</label>
+                    <input id="currentReading" type="text" required>
+
+                    <label for="previousReading">Previous Reading:</label>
+                    <input id="previousReading" type="text" required>
+
+                    <label for="totalUnits">Consumed Units:</label>
+                    <input id="totalUnits" type="text" disabled>
+
+                    <label for="ampereDemand">Ampere Demand:</label>
+                    <input id="ampereDemand" type="text">
+
+                    <label for="totalTariff">Total Tariff Rs.</label>
+                    <input id="totalTariff" type="text" class="bold">
+
+                    <button id="btnCalculate">Calculate</button>
+                </form>
+            </div>
+
+            <footer>
+                <p>Made by <a href="https://github.com/beejoy" target="_blank">Bijay Rai</a></p>
+            </footer>
+        </div>
+    </body>
+</html>
