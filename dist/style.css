@@ -113,6 +113,11 @@ input:required:invalid, input:focus:invalid {
   border-radius: 5px;
 }
 
+input:required:valid {
+  border-radius: 5px;
+  border: 0;
+}
+
 button {
   border-radius: 50px;
   border: 1px solid gray;

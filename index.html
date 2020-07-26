@@ -18,24 +18,24 @@
             <div class="calculator">
                 <form>
                     <label for="currentReading">Current Reading:</label>
-                    <input id="currentReading" type="text" pattern="\d+" required>
+                    <input id="currentReading" type="text" pattern="\d+" value="0" required>
 
                     <label for="previousReading">Previous Reading:</label>
-                    <input id="previousReading" type="text" pattern="\d+" required>
+                    <input id="previousReading" type="text" pattern="\d+" value="0" required>
 
                     <label for="totalUnits">Consumed Units:</label>
                     <input id="totalUnits" type="text" disabled >
 
                     <label for="ampereDemand">Ampere Demand:</label>
                     <select id="ampereDemand">
-                        <option value="1" selected>5 Amp</option>
-                        <option value="2">15 Amp</option>
-                        <option value="3">30 Amp</option>
-                        <option value="4">60 Amp</option>
+                        <option value="0" selected>5 Amp</option>
+                        <option value="1">15 Amp</option>
+                        <option value="2">30 Amp</option>
+                        <option value="3">60 Amp</option>
                     </select>
 
                     <label for="totalTariff">Total Tariff Rs.</label>
-                    <input id="totalTariff" type="text" value="" class="bold">
+                    <input id="totalTariff" type="text" value="" class="bold" disabled>
 
                     <button id="btnCalculate" type="button">Calculate</button>
                 </form>
