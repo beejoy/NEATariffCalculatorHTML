@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width" />
         <title>Nepal Eletricity Authority :: Tariff Calculator</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,21 +18,26 @@
             <div class="calculator">
                 <form>
                     <label for="currentReading">Current Reading:</label>
-                    <input id="currentReading" type="text" required>
+                    <input id="currentReading" type="text" pattern="\d+" required>
 
                     <label for="previousReading">Previous Reading:</label>
-                    <input id="previousReading" type="text" required>
+                    <input id="previousReading" type="text" pattern="\d+" required>
 
                     <label for="totalUnits">Consumed Units:</label>
-                    <input id="totalUnits" type="text" disabled>
+                    <input id="totalUnits" type="text" disabled >
 
                     <label for="ampereDemand">Ampere Demand:</label>
-                    <input id="ampereDemand" type="text">
+                    <select id="ampereDemand">
+                        <option value="1" selected>5 Amp</option>
+                        <option value="2">15 Amp</option>
+                        <option value="3">30 Amp</option>
+                        <option value="4">60 Amp</option>
+                    </select>
 
                     <label for="totalTariff">Total Tariff Rs.</label>
-                    <input id="totalTariff" type="text" class="bold">
+                    <input id="totalTariff" type="text" value="" class="bold">
 
-                    <button id="btnCalculate">Calculate</button>
+                    <button id="btnCalculate" type="button">Calculate</button>
                 </form>
             </div>
 
@@ -39,5 +45,7 @@
                 <p>Made by <a href="https://github.com/beejoy" target="_blank">Bijay Rai</a></p>
             </footer>
         </div>
+
+        <script src="app/js/script.js"></script>
     </body>
 </html>
