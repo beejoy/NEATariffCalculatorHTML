@@ -75,6 +75,7 @@ input, select {
     border-radius: 5px;
     border: 0;
 
+    color: hsla(0, 0%, 0%, 0.9);
     font-family: inherit;
     font-size: inherit;
 
@@ -138,4 +139,8 @@ footer {
 // General classes
 .bold {
     font-weight: bold;
+}
+
+.disabled {
+    background-color: hsla(0, 0%, 80%, 1);
 }

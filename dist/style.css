@@ -91,6 +91,7 @@ label {
 input, select {
   border-radius: 5px;
   border: 0;
+  color: rgba(0, 0, 0, 0.9);
   font-family: inherit;
   font-size: inherit;
   -ms-grid-column: 2;
@@ -154,5 +155,9 @@ footer > p {
 
 .bold {
   font-weight: bold;
+}
+
+.disabled {
+  background-color: #cccccc;
 }
 /*# sourceMappingURL=style.css.map */
