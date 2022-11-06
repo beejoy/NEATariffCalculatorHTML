@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Nepal Eletricity Authority :: Tariff Calculator</title>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nepal Eletricity Authority :: Tariff Calculator</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link href="/dist/style.css" rel="stylesheet" type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/dist/style.css" rel="stylesheet" type="text/css" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <script src="./upup.min.js"></script>
-        <script>
-            UpUp.start({
-                'content-url': './',
-                'assets': [
-                    'dist/style.css',
-                    'app/js/script.js'
-                ]
-            });
-        </script>
-    </head>
+    <script src="./upup.min.js"></script>
+    <script>
+      UpUp.start({
+        "content-url": "./",
+        assets: ["dist/style.css", "app/js/script.js"],
+      });
+    </script>
+  </head>
 
-    <body>
-        
-        <div class="container">
-            <header>
-                <h1>Nepal Electricity Authority</h1>
-                <h2>Tariff Calculator</h2>
-            </header>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Nepal Electricity Authority</h1>
+        <h2>Tariff Calculator</h2>
+      </header>
 
-            <div class="calculator">
-                <form>
-                    <label for="currentReading">Current Reading:</label>
-                    <input id="currentReading" type="text" pattern="\d+" value="0" required>
+      <div class="calculator">
+        <form id="tariffForm">
+          <label for="currentReading">Current Reading:</label>
+          <input
+            id="currentReading"
+            name="currentReading"
+            type="text"
+            pattern="\d+"
+            placeholder="0"
+            required
+          />
 
-                    <label for="previousReading">Previous Reading:</label>
-                    <input id="previousReading" type="text" pattern="\d+" value="0" required>
+          <label for="previousReading">Previous Reading:</label>
+          <input
+            id="previousReading"
+            name="previousReading"
+            type="text"
+            pattern="\d+"
+            placeholder="0"
+            required
+          />
 
-                    <label for="totalUnits">Consumed Units:</label>
-                    <input id="totalUnits" type="text" disabled class="disabled">
+          <label for="totalUnits">Consumed Units:</label>
+          <input
+            id="totalUnits"
+            name="totalUnits"
+            type="text"
+            disabled
+            class="disabled"
+          />
 
-                    <label for="ampereDemand">Ampere Demand:</label>
-                    <select id="ampereDemand">
-                        <option value="0" selected>5 Amp</option>
-                        <option value="1">15 Amp</option>
-                        <option value="2">30 Amp</option>
-                        <option value="3">60 Amp</option>
-                    </select>
+          <label for="ampereDemand">Ampere Demand:</label>
+          <select id="ampereDemand" name="ampereDemand">
+            <option value="0" selected>5 Amp</option>
+            <option value="1">15 Amp</option>
+            <option value="2">30 Amp</option>
+            <option value="3">60 Amp</option>
+          </select>
 
-                    <label for="totalTariff">Total Tariff Rs.</label>
-                    <input id="totalTariff" type="text" value="" class="bold disabled" disabled>
+          <label for="totalTariff">Total Tariff Rs.</label>
+          <input
+            id="totalTariff"
+            name="totalTariff"
+            type="text"
+            value=""
+            class="bold disabled"
+            disabled
+          />
+          <div id="buttons">
+            <button id="btnCalculate" type="submit">Calculate</button>
+            <button id="btnReset">Reset</button>
+          </div>
+        </form>
+      </div>
 
-                    <button id="btnCalculate" type="button">Calculate</button>
-                </form>
-            </div>
+      <footer>
+        <p>
+          Made by
+          <a href="https://github.com/beejoy" target="_blank" rel="noreferrer"
+            >Bijay Rai</a
+          >
+        </p>
+      </footer>
+    </div>
 
-            <footer>
-                <p>Made by <a href="https://github.com/beejoy" target="_blank" rel="noreferrer">Bijay Rai</a></p>
-            </footer>
-        </div>
-
-        <script src="app/js/script.js"></script>
-    </body>
+    <script src="app/js/script.js"></script>
+  </body>
 </html>
